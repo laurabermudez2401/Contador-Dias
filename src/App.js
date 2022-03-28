@@ -1,9 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookSquare, faPinterest, faInstagram } from '@fortawesome/free-brands-svg-icons';
-
-
 import './App.css';
 import { useEffect, useRef, useState } from 'react';
+
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+
+
 
 function App() {
   // day. hour, minutes, seconds
@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     startTimer();
     return () => {
-      clearInterval(interval.current)
+      clearInterval()
     }
   }, [])
 
@@ -88,17 +88,10 @@ function App() {
           </section>
         </div>
         <div className="footer">
-            <ul className="social">
-              <li>
-                <a href='#'><FontAwesomeIcon icon={faFacebookSquare}></FontAwesomeIcon></a>
-              </li>
-              <li>
-                <a href='#'><FontAwesomeIcon icon={faPinterest}></FontAwesomeIcon></a>
-              </li>
-              <li>
-                <a href=""><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a>
-              </li>
-            </ul>
+            
+              <button icon={faFacebookSquare}> </button>
+              
+            
         </div>
       </div>
   );
